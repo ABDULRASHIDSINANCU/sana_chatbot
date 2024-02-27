@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>INFO GENIE</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image" sizes="16x16">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/Login-Form-Dark.css') }}">
+
+</head>
+
+<body>
+  <section class="msger">
+   
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!--a class="navbar-brand" href="#">INFO GENIE</a-->
+        <a class="navbar-brand" href="#" style="color: white;">
+          &emsp;<i class="fas fa-graduation-cap"></i> <b> &nbsp; INFO GENIE &emsp; </b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item active"><a class="nav-link" href="/index">Home</a></li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModalScrollable" href="#"> About Us </a>
+             </li>
+             <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal2" href="#">Enroll</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Suggestion box</a>
+            </li>
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Suggestion Box</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action='/suggestion' method='POST'>
+                      <div class="form-group">
+                        <input type="email" name='uemail' class='form-control' placeholder="Email" required>
+                        <br>
+                        <textarea class="form-control" id="message-text" placeholder="Enter your suggestion..." name="message" required></textarea>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="Submit" class="btn btn-primary" data-target="#alert">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">INFO GENIE </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                   <h3>About Us</h3>
+                   <div><img src="static/images/college.jpg" height="auto" width="100%" style="border: 3px solid black;"></div>
+                    <br> <br>
+                   <p style="text-align: justify;">P.A. College of Engineering (PACE) was established in the year 2000 under the aegis of PAET, with an aim to provide a career-oriented professional education and to produce technically competent engineers with moral and ethical values. The institution is dedicated to promote an effective learning environment that encourages excellence and diversity in thoughts and endeavour.</p>
+
+                    <p style="text-align: justify;">PACE is affiliated to the Visvesvaraya Technological University (VTU), Belgaum and is approved by the All India Council for Technical Education (AICTE), New Delhi, recognized by the Government of Karnataka and is certified to ISO 9001-2008.</p>
+                    
+                    <p style="text-align: justify;">P.A. College of Engineering which instituted with a total intake of 240 students - 60 students each in four disciplines of engineering, has now grown in leaps and bounds. Over the 15 years, new undergraduate programs, postgraduate programmes in various branches of engineering, MBA courses and Research programmes were added to meet the growing demand in the industry and the intake has been increased to 450 in Engineering courses</p>
+
+                    <p style="text-align: justify;">PACE is located in Mangalore, a city which has established itself as the knowledge hub of South India and has become a haven for advanced study.Spread across 60 acres, the college offers the perfect setting for an academic environment.</p>
+                    <h3>Contact Us</h3>
+                    
+                    <ul>
+                    
+                    <li style = "margin-left:15px">Email: principalPAcek@gmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+            
+          </ul>
+        </div>
+        <!--Added by Sana Starts Here-->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Enrollment Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action='/enrollment' method='POST'>
+                  <div class="form-group">
+                    <input type="text" name='fullname' class='form-control' placeholder="Enter candidate full name" required>
+                    <br>
+                    <input type="text" name='dob' class='form-control' placeholder="Enter dob in dd-mm-yyyy format" required>
+                    <br>
+                    <!-- <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="male">Female
+                    <br>  <br> -->
+                    <div class="radio-container">
+                      <span class="radio-label">Gender:</span>                  
+                      <input type="radio" name="gender" value="male" >Male
+                      <input type="radio" name="gender" value="female">Female
+                  </div>
+                  <br>
+                  <br>
+                    <input type="text" name='address' class='form-control' placeholder="Enter address" required>
+                    <br>
+                    <select class="form-control" id="courseId" name="corse" required>
+                        <option value="">--Interested Course--</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Electronics & Communication">Electronics & Communication</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <!-- Add more colleges as needed -->
+                    </select>
+                    <br>
+                    <select class="form-control" id="stateId" name="state" required>
+                      <option value="">--Choose your state--</option>
+                      <option value="kerala">Kerala</option>
+                      <option value="karnataka">Karnataka</option>
+                      <option value="Tamilnadu">Tamil Nadu</option>
+                      <option value="Uttarpradesh">Uttar Pradesh</option>
+                      <!-- Add more colleges as needed -->
+                  </select>
+                    <br>
+                    <input type="email" name='mail' class='form-control' placeholder="Email" required>
+                    <br>
+                    <input type="phone" name='mob' class='form-control' placeholder="Mobile" maxlength="10" required>
+                    <br>
+                    <input type="phone" name='prevColg' class='form-control' placeholder="Previous College"  required>
+                    <br>
+                    <input type="number" name='grade' class='form-control' placeholder="Cgpa/Percentage" maxlength="3" required>
+                    <br>
+                    <textarea class="form-control" id="message-text" placeholder="Any Enquiry?..." name="enq"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="Submit" class="btn btn-primary" data-target="#alert">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Added by Sana ends Here-->
+    
+   
+    </nav>
+    <!--header class="msger-header">
+      <div class="msger-header-title">
+        <h5><i class="fas fa-graduation-cap"></i> <b> &emsp; INFO GENIE &emsp; </b><i class="fas fa-graduation-cap"></i></h5>
+      </div>
+    </header-->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible" id="alert" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong>{{ message }}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+   
+   
+    <main class="msger-chat" style="color: white;">
+    </br>
+      <div class="msg left-msg">       
+        <div class="msg-img" style = "background-image: url(static/images/chatbot.jpg)">
+        </div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name"><b>INFO GENIE</b> </div>
+          </div>      
+              
+          <div class="msg-text" style="color: white;">
+            <b >Hi there, Welcome to P.A College Of Engineering ! 🎉 <br>I'm here to assist you with any questions or concerns you may have. Don't hesitate to ask me, as I'm always ready to help! 🤝<br> 
+              So, how can I assist you today?
+          </div>
+        </div>
+      </div> 
+      <div class="msg left-msg">       
+        <div class="msg-img" style = "background-image: url(static/images/chatbot.jpg)">
+        </div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name"> <b>INFO GENIE</b></div>
+          </div>      
+              
+          <div class="msg-text" style="color: white;">
+            Can you tell me which user group you belong to?
+            
+              <br><br>1.&emsp;BTech</br>2.&emsp;MTech</br>
+    
+        </div>               
+          
+        </div>
+      </div>
+
+    </main>
+
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="textInput" placeholder="Enter your enquiry number...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+  <!-- partial -->
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
+
+    $("#alert").delay(3000).slideUp(200, function() {
+    $(this).alert('close');
+    });
+
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+
+
+    // Icons made by Freepik from www.flaticon.com
+    const BOT_IMG = "static/images/chatbot.jpg";
+    const PERSON_IMG = "https://media.istockphoto.com/id/1095289632/vector/purple-user-icon-in-the-circle-a-solid-gradient.jpg?s=170667a&w=0&k=20&c=6alqheCrBtEMOMBm3eNxQYso8jbExk-jTdedSePQbtE=";
+    const BOT_NAME = "INFO GENIE";
+    const PERSON_NAME = "You";
+
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+    });
+
+    function appendMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">${text}</div>
+  </div>
+</div>
+`;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+
+      // Bot Response
+      $.get("/get", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+      });
+
+    }
+
+
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
